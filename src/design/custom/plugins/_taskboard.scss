@@ -1,0 +1,62 @@
+//
+// taskboard.scss
+//
+
+.item-dropzone-area {
+  padding: 60px;
+  margin-bottom: 15px;
+  background-color: $gray-100 !important;
+  border: 1px dashed $gray-300 !important;
+}
+
+.tasklist {
+  min-height: 40px;
+  margin-bottom: 0;
+
+  h5 {
+    overflow: hidden;
+  }
+
+  li {
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: $white;
+    border: 1px solid $gray-300;
+    border-radius: 3px;
+
+    &:focus {
+      outline: none !important;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .btn-sm {
+      padding: 2px 8px;
+      font-size: 12px;
+    }
+
+    &.task-low {
+      border-left: 3px solid rgba($success, 0.5);
+    }
+
+    &.task-medium {
+      border-left: 3px solid rgba($warning, 0.5);
+    }
+
+    &.task-high {
+      border-left: 3px solid rgba($danger, 0.5);
+    }
+  }
+
+  .checkbox {
+    margin-left: 10px;
+  }
+}
+
+.task-placeholder {
+  padding: 20px;
+  background-color: $gray-100 !important;
+  border: 1px dashed $gray-300 !important;
+}

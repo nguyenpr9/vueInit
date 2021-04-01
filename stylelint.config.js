@@ -31,7 +31,7 @@ module.exports = {
     // to avoid very slow selectors
     'selector-max-universal': 1,
     // Disallow allow global element/type selectors in scoped modules
-    'selector-max-type': [0, { ignore: ['child', 'descendant', 'compounded'] }],
+    'selector-max-type': [1, { ignore: ['child', 'descendant', 'compounded'] }],
     // ===
     // SCSS
     // ===
@@ -44,6 +44,7 @@ module.exports = {
     'scss/selector-no-redundant-nesting-selector': true,
     // Allow SCSS and CSS module keywords beginning with `@`
     'at-rule-no-unknown': null,
+    'no-descending-specificity': null,
     'scss/at-rule-no-unknown': true,
   },
   ignore: ['scss/double-slash-comment-whitespace-inside'],

@@ -1,0 +1,86 @@
+//
+// _buttons.scss
+//
+
+button,
+a {
+  outline: none !important;
+}
+
+// Rounded Buttons
+.btn-rounded {
+  border-radius: 30px;
+}
+
+.btn-dark,
+.btn-secondary {
+  color: $gray-200 !important;
+}
+
+.btn:focus,
+.btn.focus {
+  box-shadow: none !important;
+}
+
+.btn-outline-light {
+  color: $gray-900;
+}
+
+// example 1
+
+.btn-group-example {
+  .btn {
+    position: relative;
+
+    &:first-child {
+      &::before {
+        display: none;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: -12px;
+      z-index: 1;
+      width: 24px;
+      height: 24px;
+      font-size: 10px;
+      line-height: 24px;
+      color: $light;
+      content: 'OR';
+      background-color: $gray-600;
+      border: 1px solid $white;
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+// Example 2
+
+.btn-label {
+  position: relative;
+  padding-left: 44px;
+
+  .label-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 100%;
+    font-size: 16px;
+    background-color: rgba($white, 0.1);
+    border-right: 1px solid rgba($white, 0.1);
+  }
+
+  &.btn-light {
+    .label-icon {
+      background-color: rgba($dark, 0.1);
+      border-right: 1px solid rgba($dark, 0.2);
+    }
+  }
+}

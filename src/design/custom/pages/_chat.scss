@@ -1,0 +1,241 @@
+//
+// Chat.scss
+//
+
+.chat-leftsidebar {
+  @media (min-width: 992px) {
+    min-width: 380px;
+  }
+
+  .chat-leftsidebar-nav {
+    .nav {
+      background-color: $card-bg;
+    }
+
+    .tab-content {
+      min-height: 488px;
+    }
+  }
+}
+
+.chat-noti-dropdown {
+  &.active {
+    &::before {
+      position: absolute;
+      right: 0;
+      width: 8px;
+      height: 8px;
+      content: '';
+      background-color: $danger;
+      border-radius: 50%;
+    }
+  }
+
+  .btn {
+    padding: 6px;
+    font-size: 20px;
+    box-shadow: none;
+  }
+}
+
+.chat-search-box {
+  .form-control {
+    border: 0;
+  }
+}
+
+.chat-list {
+  margin: 0;
+  li {
+    &.active {
+      a {
+        background-color: $card-bg;
+        border-color: transparent;
+        box-shadow: $box-shadow;
+      }
+    }
+    a {
+      display: block;
+      padding: 14px 16px;
+      color: $gray-600;
+      border-top: 1px solid $border-color;
+      border-radius: 4px;
+      transition: all 0.4s;
+      &:hover {
+        background-color: $card-bg;
+        border-color: transparent;
+        box-shadow: $box-shadow;
+      }
+    }
+  }
+}
+
+.user-chat-nav {
+  .dropdown {
+    .nav-btn {
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      font-size: 16px;
+      line-height: 40px;
+      background-color: $light;
+      border-radius: 50%;
+      box-shadow: none;
+    }
+
+    .dropdown-menu {
+      border: 1px solid $border-color;
+      box-shadow: $box-shadow;
+    }
+  }
+}
+.chat-users {
+  .chat-conversation {
+    min-height: 450px;
+  }
+}
+
+.chat-conversation {
+  li {
+    clear: both;
+  }
+
+  .chat-day-title {
+    position: relative;
+    margin-bottom: 24px;
+    text-align: center;
+
+    .title {
+      position: relative;
+      z-index: 1;
+      padding: 6px 24px;
+      background-color: $card-bg;
+    }
+
+    &::before {
+      position: absolute;
+      top: 10px;
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      content: '';
+      background-color: $border-color;
+    }
+    .badge {
+      font-size: 12px;
+    }
+  }
+  .conversation-list {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 24px;
+
+    .ctext-wrap {
+      padding: 12px 24px;
+      overflow: hidden;
+      background-color: rgba($primary, 0.1);
+      border-radius: 8px 8px 8px 0;
+
+      .conversation-name {
+        margin-bottom: 4px;
+        font-weight: $font-weight-semibold;
+        color: $primary;
+      }
+    }
+
+    .dropdown {
+      float: right;
+      .dropdown-toggle {
+        padding: 4px;
+        font-size: 18px;
+        color: $gray-600;
+        @media (max-width: 575.98px) {
+          display: none;
+        }
+      }
+
+      .dropdown-menu {
+        border: 1px solid $border-color;
+        box-shadow: $box-shadow;
+      }
+    }
+
+    .chat-time {
+      font-size: 12px;
+    }
+  }
+
+  .right {
+    .conversation-list {
+      float: right;
+      .ctext-wrap {
+        text-align: right;
+        background-color: $light;
+        border-radius: 8px 8px 0 8px;
+      }
+      .dropdown {
+        float: left;
+      }
+
+      &.last-chat {
+        .conversation-list {
+          &::before {
+            right: 0;
+            left: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .last-chat {
+    .conversation-list {
+      &::before {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        font-family: 'Material Design Icons', serif;
+        font-size: 16px;
+        color: $primary;
+        content: '\F0009';
+
+        @media (max-width: 575.98px) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.chat-input-section {
+  border-top: 1px solid $border-color;
+}
+
+.chat-input {
+  padding-right: 120px;
+  background-color: $light !important;
+  border-color: $light !important;
+  border-radius: 30px;
+}
+
+.chat-input-links {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  li {
+    a {
+      display: inline-block;
+      padding: 0 4px;
+      font-size: 16px;
+      line-height: 36px;
+    }
+  }
+}
+
+.chat-send {
+  @media (max-width: 575.98px) {
+    min-width: auto;
+  }
+}

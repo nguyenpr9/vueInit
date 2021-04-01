@@ -1,0 +1,77 @@
+//
+// authentication.scss
+//
+
+// authentication home icon
+.home-btn {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+}
+
+// auth 2
+
+.auth-logo {
+  .auth-logo-dark {
+    display: $display-block;
+  }
+
+  .auth-logo-light {
+    display: $display-none;
+  }
+}
+
+.auth-body-bg {
+  background-color: $card-bg;
+}
+
+// authentication full page
+
+.auth-full-bg {
+  display: flex;
+  background-color: rgba($primary, 0.25);
+
+  @media (min-width: 1200px) {
+    height: 100vh;
+  }
+
+  &::before {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    content: '';
+    border-radius: 50%;
+  }
+
+  .bg-overlay {
+    background: url('~@assets/images/bg-auth-overlay.png') no-repeat center;
+    background-size: cover;
+  }
+}
+
+.auth-full-page-content {
+  display: flex;
+
+  @media (min-width: 1200px) {
+    min-height: 100vh;
+  }
+}
+
+.auth-review-carousel {
+  &.owl-theme {
+    .owl-dots {
+      .owl-dot {
+        span {
+          background-color: rgba($primary, 0.25);
+        }
+
+        &.active,
+        &:hover {
+          span {
+            background-color: $primary;
+          }
+        }
+      }
+    }
+  }
+}

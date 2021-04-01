@@ -1,0 +1,27 @@
+//
+// _footer.scss
+//
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 250px;
+  height: $footer-height;
+  padding: 20px calc(#{$grid-gutter-width} / 2);
+  color: $footer-color;
+  background-color: $footer-bg;
+}
+
+@media (max-width: 992px) {
+  .footer {
+    left: 0;
+  }
+}
+
+// Enlarge menu
+.vertical-collpsed {
+  .footer {
+    left: $sidebar-collapsed-width;
+  }
+}

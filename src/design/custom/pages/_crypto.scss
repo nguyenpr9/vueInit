@@ -1,0 +1,328 @@
+//
+// crypto.scss
+//
+
+@media (min-width: 576px) {
+  .currency-value {
+    position: relative;
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      right: -34px;
+      z-index: 9;
+      width: 45px;
+      height: 45px;
+      font-family: 'Material Design Icons', serif;
+      font-size: 24px;
+      line-height: 45px;
+      color: $white;
+      text-align: center;
+      content: '\F04E1';
+      background-color: $primary;
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.crypto-buy-sell-nav-content {
+  border: 2px solid $gray-300;
+  border-top: 0;
+}
+
+// KYC Application
+
+.kyc-doc-verification {
+  .dropzone {
+    padding: 0 !important;
+  }
+}
+
+/******************
+    Ico Landing
+*******************/
+
+.section {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  &.bg-white {
+    background-color: $card-bg !important;
+  }
+}
+
+.small-title {
+  margin-bottom: 8px;
+  color: $gray-600;
+}
+
+// Navigation
+
+.navigation {
+  z-index: 999;
+  width: 100%;
+  padding: 0 16px;
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba($white, 0.1);
+  transition: all 0.5s ease-in-out;
+
+  @media (max-width: 991.98px) {
+    background-color: $topnav-bg;
+  }
+
+  .navbar-logo {
+    line-height: 70px;
+    transition: all 0.4s;
+    .logo-dark {
+      display: none;
+      @media (max-width: 991.98px) {
+        display: block;
+      }
+    }
+    .logo-light {
+      display: block;
+      @media (max-width: 991.98px) {
+        display: none;
+      }
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        padding: 6px 16px;
+        font-weight: $font-weight-medium;
+        line-height: 58px;
+        color: rgba($white, 0.6);
+        transition: all 0.4s;
+
+        @media (max-width: 991.98px) {
+          color: $header-item-color;
+        }
+
+        &:hover,
+        &.active {
+          color: rgba($white, 0.9);
+
+          @media (max-width: 991.98px) {
+            color: $primary;
+          }
+        }
+
+        @media (max-width: 991.98px) {
+          line-height: 28px !important;
+        }
+      }
+    }
+  }
+
+  &.nav-sticky {
+    background-color: $topnav-bg;
+    box-shadow: $box-shadow;
+    .navbar-logo {
+      line-height: 60px;
+
+      .logo-dark {
+        display: $display-block;
+      }
+      .logo-light {
+        display: $display-none;
+      }
+    }
+
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          line-height: 48px;
+          color: $header-item-color;
+          &:hover,
+          &.active {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $black;
+  opacity: 0.7;
+}
+
+.hero-section {
+  padding-top: 220px;
+  padding-bottom: 190px;
+
+  &.bg-ico-hero {
+    background-image: url('~~~@assets/images/crypto/bg-ico-hero.jpg');
+    background-position: top;
+    background-size: cover;
+  }
+
+  @media (max-width: 575.98px) {
+    padding-top: 140px;
+    padding-bottom: 80px;
+  }
+
+  .hero-title {
+    font-size: 42px;
+    @media (max-width: 575.98px) {
+      font-size: 26px;
+    }
+  }
+
+  .ico-countdown {
+    margin-right: -12px;
+    margin-left: -12px;
+    font-size: 22px;
+    @media (max-width: 575.98px) {
+      display: block;
+    }
+    .coming-box {
+      padding: 8px;
+      margin-right: 12px;
+      margin-left: 12px;
+      background-color: $card-bg;
+      border: 1px solid $border-color;
+      border-radius: 4px;
+
+      @media (max-width: 575.98px) {
+        display: inline-block;
+        width: 40%;
+        margin-bottom: 24px;
+      }
+
+      span {
+        padding: 4px;
+        margin-top: 8px;
+        font-size: 12px;
+        background-color: $light;
+      }
+    }
+  }
+
+  .softcap-progress {
+    overflow: visible;
+
+    .progress-bar {
+      overflow: visible;
+    }
+
+    .progress-label {
+      position: relative;
+      bottom: 20px;
+      font-size: 12px;
+      font-weight: $font-weight-medium;
+      color: $body-color;
+      text-align: right;
+    }
+  }
+}
+
+// currency price
+
+.currency-price {
+  position: relative;
+  bottom: 40px;
+}
+
+// Clients
+
+.client-images {
+  img {
+    width: auto !important;
+    max-height: 34px;
+    margin: 12px auto;
+    opacity: 0.7;
+    transition: all 0.4s;
+  }
+}
+
+// Features
+
+.features-number {
+  opacity: 0.1;
+}
+
+// Team
+
+.team-box {
+  .team-social-links {
+    a {
+      font-size: 14px;
+      color: $body-color;
+    }
+  }
+}
+
+// Blog
+
+.blog-box {
+  .blog-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
+}
+
+// landing footer
+
+.landing-footer {
+  padding: 80px 0 40px;
+  color: rgba($white, 0.5);
+  background-color: $sidebar-dark-bg;
+
+  .footer-list-title {
+    color: rgba($white, 0.9);
+  }
+
+  .footer-list-menu {
+    li {
+      a {
+        display: block;
+        margin-bottom: 14px;
+        color: rgba($white, 0.5);
+        transition: all 0.4s;
+        &:hover {
+          color: rgba($white, 0.8);
+        }
+      }
+    }
+  }
+
+  .blog-post {
+    .post {
+      display: block;
+      padding: 16px 0;
+      color: rgba($white, 0.5);
+      border-bottom: 1px solid rgba($white, 0.1);
+      .post-title {
+        font-size: 14px;
+        color: rgba($white, 0.8);
+      }
+
+      &:first-of-type {
+        padding-top: 0;
+      }
+
+      &:last-of-type {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+    }
+  }
+
+  .footer-border {
+    border-color: rgba($white, 0.1);
+  }
+}

@@ -1,0 +1,13 @@
+//
+// projects.scss
+//
+
+// project list
+
+.project-list-table {
+  border-spacing: 0 12px;
+  border-collapse: separate;
+  tr {
+    background-color: $card-bg;
+  }
+}
