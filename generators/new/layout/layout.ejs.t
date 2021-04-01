@@ -7,7 +7,7 @@ to: "src/router/layouts/<%= h.changeCase.kebab(name) %>.vue"
   </div>
 </template>
 
-<style lang="scss" module>
+<style lang="scss" scoped>
 
 
 .container {

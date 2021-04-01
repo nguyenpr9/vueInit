@@ -25,7 +25,7 @@ export default {
 <%
 
 if (useStyles) { %>
-<style lang="scss" module>
+<style lang="scss" scoped>
 
 </style>
 <% } %>

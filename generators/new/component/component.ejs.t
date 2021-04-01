@@ -24,7 +24,7 @@ if (blocks.indexOf('template') !== -1) {
 
 if (blocks.indexOf('style') !== -1) {
 %>
-<style lang="scss" module>
+<style lang="scss" scoped>
 
 </style><%
 }
