@@ -1,14 +1,37 @@
 <script>
-import NavBar from '@components/nav-bar.vue'
+import { layoutComputed } from '@state/helpers'
+import Vertical from './vertical.vue'
 
 export default {
-  components: { NavBar },
+  components: {
+    Vertical,
+  },
+  computed: {
+    ...layoutComputed,
+  },
 }
 </script>
 
 <template>
   <div>
-    <NavBar />
-    <slot />
+    <div v-if="loader" id="preloader">
+      <div id="status">
+        <div class="spinner-chase">
+          <div class="chase-dot"></div>
+          <div class="chase-dot"></div>
+          <div class="chase-dot"></div>
+          <div class="chase-dot"></div>
+          <div class="chase-dot"></div>
+          <div class="chase-dot"></div>
+        </div>
+      </div>
+    </div>
+    <Vertical>
+      <slot />
+    </Vertical>
   </div>
 </template>
+
+<style lang="scss" module>
+@import '@design';
+</style>

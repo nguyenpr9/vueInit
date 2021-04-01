@@ -20,7 +20,6 @@ export default {
 
 <style lang="scss">
 // https://necolas.github.io/normalize.css/
-@import '~normalize.css/normalize.css';
 // https://github.com/rstacruz/nprogress
 @import '~nprogress/nprogress.css';
 @import '@design';

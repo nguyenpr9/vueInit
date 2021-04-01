@@ -1,5 +1,5 @@
 <script>
-import Layout from '@layouts/main.vue'
+import Layout from '@layouts/auth.vue'
 import { authMethods } from '@state/helpers'
 import appConfig from '@src/app.config'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
