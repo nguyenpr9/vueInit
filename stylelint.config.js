@@ -25,8 +25,8 @@ module.exports = {
     'string-no-newline': null,
     // Enforce camelCase for classes and ids, to work better
     // with CSS modules
-    'selector-class-pattern': /^[a-z][a-zA-Z]*(-(enter|leave)(-(active|to))?)?$/,
-    'selector-id-pattern': /^[a-z][a-zA-Z]*$/,
+    'selector-class-pattern': /^[a-zA-Z0-9-_]*(-(enter|leave)(-(active|to))?)?$/,
+    'selector-id-pattern': /^[a-zA-Z0-9-_]*$/,
     // Limit the number of universal selectors in a selector,
     // to avoid very slow selectors
     'selector-max-universal': 1,
@@ -38,8 +38,7 @@ module.exports = {
     'scss/dollar-variable-colon-space-after': 'always',
     'scss/dollar-variable-colon-space-before': 'never',
     'scss/dollar-variable-no-missing-interpolation': true,
-    'scss/dollar-variable-pattern': /^[a-z-]+$/,
-    'scss/double-slash-comment-whitespace-inside': 'always',
+    'scss/dollar-variable-pattern': /^[0-9a-z-]+$/,
     'scss/operator-no-newline-before': true,
     'scss/operator-no-unspaced': true,
     'scss/selector-no-redundant-nesting-selector': true,
@@ -47,4 +46,5 @@ module.exports = {
     'at-rule-no-unknown': null,
     'scss/at-rule-no-unknown': true,
   },
+  ignore: ['scss/double-slash-comment-whitespace-inside'],
 }

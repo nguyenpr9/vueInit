@@ -18,7 +18,6 @@ export default {
   </div>
 </template>
 
-
 <style lang="scss">
 // https://necolas.github.io/normalize.css/
 @import '~normalize.css/normalize.css';
@@ -27,6 +26,6 @@ export default {
 @import '@design';
 
 #nprogress .bar {
-  background: #39A275; // $color-link-text
+  background: #39a275; // $color-link-text
 }
 </style>
