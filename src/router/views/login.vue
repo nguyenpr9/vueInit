@@ -91,7 +91,3 @@ export default {
     </form>
   </Layout>
 </template>
-
-<style lang="scss" module>
-@import '@design';
-</style>

@@ -28,7 +28,7 @@ export default {
   </Layout>
 </template>
 
-<style lang="scss" module>
+<style lang="scss" scoped>
 .title {
   text-align: center;
 }

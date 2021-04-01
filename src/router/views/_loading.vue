@@ -24,9 +24,7 @@ export default {
   </Layout>
 </template>
 
-<style lang="scss" module>
-@import '@design';
-
+<style lang="scss" scoped>
 .loadingIcon {
   display: block;
   margin: 0 auto;

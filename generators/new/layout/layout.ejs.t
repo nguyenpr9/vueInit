@@ -8,7 +8,7 @@ to: "src/router/layouts/<%= h.changeCase.kebab(name) %>.vue"
 </template>
 
 <style lang="scss" module>
-@import '@design';
+
 
 .container {
   min-width: $size-content-width-min;

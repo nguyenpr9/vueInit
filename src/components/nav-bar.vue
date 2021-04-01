@@ -41,7 +41,3 @@ export default {
     <router-link v-else to="/profile">profile</router-link>
   </div>
 </template>
-
-<style lang="scss" module>
-@import '@design';
-</style>
