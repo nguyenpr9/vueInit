@@ -3,37 +3,37 @@
 //
 
 .avatar-xs {
-  width: 2rem;
   height: 2rem;
+  width: 2rem;
 }
 
 .avatar-sm {
-  width: 3rem;
   height: 3rem;
+  width: 3rem;
 }
 
 .avatar-md {
-  width: 4.5rem;
   height: 4.5rem;
+  width: 4.5rem;
 }
 
 .avatar-lg {
-  width: 6rem;
   height: 6rem;
+  width: 6rem;
 }
 
 .avatar-xl {
-  width: 7.5rem;
   height: 7.5rem;
+  width: 7.5rem;
 }
 
 .avatar-title {
-  display: flex;
   align-items: center;
+  background-color: $primary;
+  color: $white;
+  display: flex;
+  font-weight: $font-weight-medium;
+  height: 100%;
   justify-content: center;
   width: 100%;
-  height: 100%;
-  font-weight: $font-weight-medium;
-  color: $white;
-  background-color: $primary;
 }

@@ -5,9 +5,9 @@
 // checkbox input right
 
 .form-check-right {
+  padding-left: 0;
   display: inline-block;
   padding-right: 1.25rem;
-  padding-left: 0;
 
   .form-check-input {
     right: 0;
@@ -20,16 +20,16 @@
 }
 
 .custom-control-right {
-  padding-right: 1.5rem;
   padding-left: 0;
+  padding-right: 1.5rem;
 
   .custom-control-label {
     display: inline-block;
 
-    &::before,
-    &::after {
-      right: -1.5rem;
+    &:before,
+    &:after {
       left: auto;
+      right: -1.5rem;
     }
   }
 
@@ -47,16 +47,16 @@
 
   .custom-control-input {
     &:checked ~ .custom-control-label {
-      &::after {
+      &:after {
+        background-image: none;
+        content: '\F012C';
+        font-family: 'Material Design Icons';
+        font-size: 20px;
         top: -8px;
         left: -22px;
-        font-family: 'Material Design Icons', serif;
-        font-size: 20px;
-        content: '\F012C';
-        background-image: none;
       }
 
-      &::before {
+      &:before {
         background-color: transparent !important;
       }
     }
@@ -72,16 +72,16 @@
 
   .custom-control-input {
     &:checked ~ .custom-control-label {
-      &::after {
+      &:after {
+        background-image: none;
+        content: '\F0765';
+        font-family: 'Material Design Icons';
+        font-size: 8px;
         top: 4px;
         left: -20px;
-        font-family: 'Material Design Icons', serif;
-        font-size: 8px;
-        content: '\F0765';
-        background-image: none;
       }
 
-      &::before {
+      &:before {
         background-color: transparent !important;
       }
     }
@@ -94,7 +94,7 @@
   .custom-checkbox-#{$color},
   .custom-radio-#{$color} {
     .custom-control-input {
-      &:checked ~ .custom-control-label::before {
+      &:checked ~ .custom-control-label:before {
         background-color: $value;
         border-color: $value;
       }
@@ -104,7 +104,7 @@
   .custom-radio-outline {
     &.custom-radio-#{$color} {
       .custom-control-input {
-        &:checked ~ .custom-control-label::after {
+        &:checked ~ .custom-control-label:after {
           color: $value;
         }
       }
@@ -115,7 +115,7 @@
 .custom-checkbox-dark,
 .custom-radio-dark {
   .custom-control-input {
-    &:checked ~ .custom-control-label::before {
+    &:checked ~ .custom-control-label:before {
       color: $dark;
     }
   }
@@ -133,17 +133,17 @@
   .custom-control-label {
     line-height: 20px;
 
-    &::before {
-      left: -3rem;
+    &:before {
       width: 40px;
       height: 20px;
       border-radius: 30px;
+      left: -3rem;
     }
 
-    &::after {
-      left: calc(-3rem + 2px);
+    &:after {
       width: calc(20px - 4px);
       height: calc(20px - 4px);
+      left: calc(-3rem + 2px);
     }
   }
 
@@ -158,17 +158,17 @@
   .custom-control-label {
     line-height: 24px;
 
-    &::before {
-      left: -3.75rem;
+    &:before {
       width: 48px;
       height: 24px;
       border-radius: 30px;
+      left: -3.75rem;
     }
 
-    &::after {
-      left: calc(-3.75rem + 2px);
+    &:after {
       width: calc(24px - 4px);
       height: calc(24px - 4px);
+      left: calc(-3.75rem + 2px);
       border-radius: 50%;
     }
   }

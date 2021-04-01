@@ -4,8 +4,8 @@
 
 // Demo Only
 .button-items {
-  margin-bottom: -12px;
   margin-left: -8px;
+  margin-bottom: -12px;
 
   .btn {
     margin-bottom: 12px;
@@ -33,13 +33,13 @@
 
 // Icon demo ( Demo only )
 .icon-demo-content {
-  color: $gray-500;
   text-align: center;
+  color: $gray-500;
 
   i {
     display: block;
-    margin-bottom: 16px;
     font-size: 24px;
+    margin-bottom: 16px;
     color: $gray-600;
     transition: all 0.4s;
   }
@@ -60,24 +60,24 @@
 
 .grid-structure {
   .grid-container {
-    padding: 10px 20px;
+    background-color: $gray-100;
     margin-top: 10px;
     font-size: 0.8rem;
     font-weight: $font-weight-medium;
-    background-color: $gray-100;
+    padding: 10px 20px;
   }
 }
 
 // card radio
 
 .card-radio {
+  background-color: $card-bg;
+  border: 2px solid $card-border-color;
+  border-radius: $border-radius;
   padding: 1rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  background-color: $card-bg;
-  border: 2px solid $card-border-color;
-  border-radius: $border-radius;
 
   &:hover {
     cursor: pointer;

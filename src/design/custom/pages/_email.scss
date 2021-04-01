@@ -1,9 +1,9 @@
 /* ==============
   Email
-=================== */
+===================*/
 .email-leftbar {
-  float: left;
   width: 236px;
+  float: left;
   padding: 20px;
   border-radius: 5px;
 }
@@ -14,8 +14,8 @@
 
 .chat-user-box {
   p.user-title {
-    font-weight: 500;
     color: $dark;
+    font-weight: 500;
   }
 
   p {
@@ -37,13 +37,13 @@
 .mail-list {
   a {
     display: block;
-    padding: 8px 5px;
-    line-height: 24px;
     color: $gray-600;
+    line-height: 24px;
+    padding: 8px 5px;
 
     &.active {
-      font-weight: 500;
       color: $danger;
+      font-weight: 500;
     }
   }
 }
@@ -70,8 +70,8 @@
     }
 
     .col-mail {
-      position: relative;
       float: left;
+      position: relative;
     }
 
     .col-mail-1 {
@@ -85,13 +85,13 @@
       }
 
       .dot {
-        width: 0;
-        height: 0;
-        margin: 22px 26px 0;
-        font-size: 0;
-        line-height: 0;
         border: 4px solid transparent;
         border-radius: 100px;
+        margin: 22px 26px 0;
+        height: 0;
+        width: 0;
+        line-height: 0;
+        font-size: 0;
       }
 
       .checkbox-wrapper-mail {
@@ -106,21 +106,21 @@
       .title {
         position: absolute;
         top: 0;
-        right: 0;
         left: 110px;
-        margin-bottom: 0;
-        overflow: hidden;
+        right: 0;
         text-overflow: ellipsis;
+        overflow: hidden;
         white-space: nowrap;
+        margin-bottom: 0;
       }
     }
 
     .col-mail-2 {
       position: absolute;
       top: 0;
+      left: 320px;
       right: 0;
       bottom: 0;
-      left: 320px;
 
       .subject,
       .date {
@@ -129,10 +129,10 @@
       }
 
       .subject {
-        right: 200px;
         left: 0;
-        overflow: hidden;
+        right: 200px;
         text-overflow: ellipsis;
+        overflow: hidden;
         white-space: nowrap;
       }
 
@@ -149,29 +149,29 @@
     }
 
     &.unread {
+      background-color: $gray-300;
       font-weight: 500;
       color: darken($dark, 5%);
-      background-color: $gray-300;
 
       a {
-        font-weight: 500;
         color: darken($dark, 5%);
+        font-weight: 500;
       }
     }
   }
 
   .checkbox-wrapper-mail {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
     position: relative;
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    border-radius: 1px;
     box-shadow: inset 0 0 0 1px $gray-400;
+    border-radius: 1px;
 
     input {
-      cursor: pointer;
       opacity: 0;
+      cursor: pointer;
     }
 
     input:checked ~ label {
@@ -180,26 +180,26 @@
 
     label {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 20px;
       height: 20px;
-      margin-bottom: 0;
+      width: 20px;
+      left: 0;
       cursor: pointer;
       opacity: 0;
+      margin-bottom: 0;
       transition-duration: 0.05s;
+      top: 0;
 
-      &::before {
-        position: absolute;
-        top: 0;
-        left: 4px;
-        width: 20px;
-        height: 20px;
-        margin-top: -16px;
-        font-family: 'Material Design Icons', serif;
-        font-size: 13px;
-        color: darken($dark, 5%);
+      &:before {
         content: '\F012C';
+        font-family: 'Material Design Icons';
+        top: 0;
+        height: 20px;
+        color: darken($dark, 5%);
+        width: 20px;
+        position: absolute;
+        margin-top: -16px;
+        left: 4px;
+        font-size: 13px;
       }
     }
   }

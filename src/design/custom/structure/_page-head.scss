@@ -6,13 +6,13 @@
   padding-bottom: $grid-gutter-width;
 
   .breadcrumb {
-    padding: 0;
     background-color: transparent;
+    padding: 0;
   }
 
   h4 {
-    font-size: 16px !important;
-    font-weight: 600;
     text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px !important;
   }
 }

@@ -9,7 +9,6 @@
 }
 
 .ck.ck-editor__main > .ck-editor__editable {
-  background-color: $card-bg !important;
   border-color: $input-border-color !important;
   box-shadow: none !important;
 }
@@ -26,6 +25,10 @@
 
 .ck.ck-toolbar.ck-toolbar_grouping > .ck-toolbar__items {
   flex-wrap: wrap !important;
+}
+
+.ck.ck-editor__main > .ck-editor__editable {
+  background-color: $card-bg !important;
 }
 
 .ck.ck-reset_all,
@@ -75,13 +78,12 @@ a.ck.ck-button:not(.ck-disabled):hover {
   .mce-btn .mce-ico,
   .mce-path-item {
     color: $gray-600 !important;
-    border: 0 solid !important;
+    border: 0px solid !important;
   }
   iframe {
     p {
       color: $gray-600 !important;
     }
   }
-
   color: $gray-600 !important;
 }

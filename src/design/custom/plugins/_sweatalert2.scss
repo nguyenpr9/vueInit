@@ -12,8 +12,8 @@
 
 .swal2-icon {
   &.swal2-question {
-    color: $info;
     border-color: $info;
+    color: $info;
   }
   &.swal2-success {
     [class^='swal2-success-line'] {
@@ -25,8 +25,8 @@
     }
   }
   &.swal2-warning {
-    color: $warning;
     border-color: $warning;
+    color: $warning;
   }
 }
 
@@ -40,8 +40,8 @@
   .swal2-progress-step {
     &.swal2-active-progress-step {
       background: $primary;
-      ~ .swal2-progress-step,
-      ~ .swal2-progress-step-line {
+      & ~ .swal2-progress-step,
+      & ~ .swal2-progress-step-line {
         background: rgba($primary, 0.3);
       }
     }

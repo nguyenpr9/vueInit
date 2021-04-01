@@ -6,8 +6,8 @@
   .nav {
     .nav-link {
       padding: 24px 16px;
-      margin-bottom: 8px;
       text-align: center;
+      margin-bottom: 8px;
       .nav-icon {
         font-size: 24px;
       }
@@ -19,16 +19,16 @@
 .nav-pills {
   > li {
     > a {
-      font-weight: $font-weight-medium;
       color: $gray-700;
+      font-weight: $font-weight-medium;
     }
   }
 }
 
 .nav-pills {
   > a {
-    font-weight: $font-weight-medium;
     color: $gray-700;
+    font-weight: $font-weight-medium;
   }
 }
 
@@ -42,20 +42,20 @@
       border: none;
 
       &::after {
-        position: absolute;
-        bottom: -1px;
-        left: 0;
-        width: 100%;
-        height: 2px;
         content: '';
         background: $primary;
+        height: 2px;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: -1px;
         transition: all 250ms ease 0s;
         transform: scale(0);
       }
 
       &.active {
         color: $primary;
-        &::after {
+        &:after {
           transform: scale(1);
         }
       }

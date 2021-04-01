@@ -20,21 +20,21 @@
 
 .chat-noti-dropdown {
   &.active {
-    &::before {
+    &:before {
+      content: '';
       position: absolute;
-      right: 0;
       width: 8px;
       height: 8px;
-      content: '';
       background-color: $danger;
       border-radius: 50%;
+      right: 0;
     }
   }
 
   .btn {
     padding: 6px;
-    font-size: 20px;
     box-shadow: none;
+    font-size: 20px;
   }
 }
 
@@ -58,9 +58,9 @@
       display: block;
       padding: 14px 16px;
       color: $gray-600;
+      transition: all 0.4s;
       border-top: 1px solid $border-color;
       border-radius: 4px;
-      transition: all 0.4s;
       &:hover {
         background-color: $card-bg;
         border-color: transparent;
@@ -73,19 +73,19 @@
 .user-chat-nav {
   .dropdown {
     .nav-btn {
-      width: 40px;
       height: 40px;
+      width: 40px;
+      line-height: 40px;
+      box-shadow: none;
       padding: 0;
       font-size: 16px;
-      line-height: 40px;
       background-color: $light;
       border-radius: 50%;
-      box-shadow: none;
     }
 
     .dropdown-menu {
-      border: 1px solid $border-color;
       box-shadow: $box-shadow;
+      border: 1px solid $border-color;
     }
   }
 }
@@ -102,53 +102,53 @@
 
   .chat-day-title {
     position: relative;
-    margin-bottom: 24px;
     text-align: center;
+    margin-bottom: 24px;
 
     .title {
+      background-color: $card-bg;
       position: relative;
       z-index: 1;
       padding: 6px 24px;
-      background-color: $card-bg;
     }
 
-    &::before {
+    &:before {
+      content: '';
       position: absolute;
-      top: 10px;
-      right: 0;
-      left: 0;
       width: 100%;
       height: 1px;
-      content: '';
+      left: 0;
+      right: 0;
       background-color: $border-color;
+      top: 10px;
     }
     .badge {
       font-size: 12px;
     }
   }
   .conversation-list {
-    position: relative;
-    display: inline-block;
     margin-bottom: 24px;
+    display: inline-block;
+    position: relative;
 
     .ctext-wrap {
       padding: 12px 24px;
-      overflow: hidden;
       background-color: rgba($primary, 0.1);
-      border-radius: 8px 8px 8px 0;
+      border-radius: 8px 8px 8px 0px;
+      overflow: hidden;
 
       .conversation-name {
-        margin-bottom: 4px;
         font-weight: $font-weight-semibold;
         color: $primary;
+        margin-bottom: 4px;
       }
     }
 
     .dropdown {
       float: right;
       .dropdown-toggle {
-        padding: 4px;
         font-size: 18px;
+        padding: 4px;
         color: $gray-600;
         @media (max-width: 575.98px) {
           display: none;
@@ -156,8 +156,8 @@
       }
 
       .dropdown-menu {
-        border: 1px solid $border-color;
         box-shadow: $box-shadow;
+        border: 1px solid $border-color;
       }
     }
 
@@ -170,9 +170,9 @@
     .conversation-list {
       float: right;
       .ctext-wrap {
-        text-align: right;
         background-color: $light;
-        border-radius: 8px 8px 0 8px;
+        text-align: right;
+        border-radius: 8px 8px 0px 8px;
       }
       .dropdown {
         float: left;
@@ -180,7 +180,7 @@
 
       &.last-chat {
         .conversation-list {
-          &::before {
+          &:before {
             right: 0;
             left: auto;
           }
@@ -191,14 +191,14 @@
 
   .last-chat {
     .conversation-list {
-      &::before {
+      &:before {
+        content: '\F0009';
+        font-family: 'Material Design Icons';
         position: absolute;
+        color: $primary;
         right: 0;
         bottom: 0;
-        font-family: 'Material Design Icons', serif;
         font-size: 16px;
-        color: $primary;
-        content: '\F0009';
 
         @media (max-width: 575.98px) {
           display: none;
@@ -213,23 +213,23 @@
 }
 
 .chat-input {
-  padding-right: 120px;
+  border-radius: 30px;
   background-color: $light !important;
   border-color: $light !important;
-  border-radius: 30px;
+  padding-right: 120px;
 }
 
 .chat-input-links {
   position: absolute;
-  top: 50%;
   right: 16px;
+  top: 50%;
   transform: translateY(-50%);
   li {
     a {
-      display: inline-block;
-      padding: 0 4px;
       font-size: 16px;
       line-height: 36px;
+      padding: 0px 4px;
+      display: inline-block;
     }
   }
 }

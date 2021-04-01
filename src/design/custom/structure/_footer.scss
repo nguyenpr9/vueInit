@@ -3,13 +3,13 @@
 //
 
 .footer {
+  bottom: 0;
+  padding: 20px calc(#{$grid-gutter-width} / 2);
   position: absolute;
   right: 0;
-  bottom: 0;
+  color: $footer-color;
   left: 250px;
   height: $footer-height;
-  padding: 20px calc(#{$grid-gutter-width} / 2);
-  color: $footer-color;
   background-color: $footer-bg;
 }
 

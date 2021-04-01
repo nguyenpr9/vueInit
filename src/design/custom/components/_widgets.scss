@@ -4,19 +4,19 @@
 
 .mini-stats-wid {
   .mini-stat-icon {
-    position: relative;
     overflow: hidden;
-    &::before,
-    &::after {
+    position: relative;
+    &:before,
+    &:after {
+      content: '';
       position: absolute;
-      top: -5px;
-      left: 16px;
       width: 8px;
       height: 54px;
-      content: '';
       background-color: rgba($white, 0.1);
-      transition: all 0.4s;
+      left: 16px;
       transform: rotate(32deg);
+      top: -5px;
+      transition: all 0.4s;
     }
 
     &::after {

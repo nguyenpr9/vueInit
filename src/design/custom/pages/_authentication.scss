@@ -28,24 +28,26 @@
 // authentication full page
 
 .auth-full-bg {
-  display: flex;
   background-color: rgba($primary, 0.25);
+  display: flex;
 
   @media (min-width: 1200px) {
     height: 100vh;
   }
 
   &::before {
+    content: '';
     position: absolute;
     width: 300px;
     height: 300px;
-    content: '';
     border-radius: 50%;
   }
 
   .bg-overlay {
-    background: url('~@assets/images/bg-auth-overlay.png') no-repeat center;
+    background: url('~@assets/images/bg-auth-overlay.png');
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 

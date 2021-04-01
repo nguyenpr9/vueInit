@@ -44,16 +44,16 @@
 .custom-accordion {
   .accordion-list {
     display: flex;
+    border-radius: 7px;
+    background-color: $gray-300;
+    padding: 12px 20px;
+    color: $body-color;
+    font-weight: $font-weight-semibold;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 20px;
-    font-weight: $font-weight-semibold;
-    color: $body-color;
-    background-color: $gray-300;
-    border-radius: 7px;
     &.collapsed {
       i.accor-plus-icon {
-        &::before {
+        &:before {
           content: '\F0415';
         }
       }
@@ -61,12 +61,12 @@
 
     .accor-plus-icon {
       display: inline-block;
-      width: 24px;
-      height: 24px;
       font-size: 16px;
+      height: 24px;
+      width: 24px;
       line-height: 22px;
-      text-align: center;
       background-color: $card-bg;
+      text-align: center;
       border-radius: 50%;
     }
   }
@@ -74,7 +74,7 @@
   a {
     &.collapsed {
       i.accor-down-icon {
-        &::before {
+        &:before {
           content: '\F0140';
         }
       }

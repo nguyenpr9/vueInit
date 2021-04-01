@@ -59,14 +59,14 @@
 // Social
 
 .social-list-item {
-  display: block;
-  width: 2rem;
   height: 2rem;
+  width: 2rem;
   line-height: calc(2rem - 2px);
-  color: $gray-500;
-  text-align: center;
+  display: block;
   border: 1px solid $gray-500;
   border-radius: 50%;
+  color: $gray-500;
+  text-align: center;
   &:hover {
     color: $gray-600;
     background-color: $gray-200;

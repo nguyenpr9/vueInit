@@ -7,7 +7,7 @@
     div {
       background-color: $gray-400 !important;
 
-      &::after {
+      &:after {
         background-color: $gray-600 !important;
       }
     }
@@ -16,7 +16,7 @@
       div {
         background-color: $gray-300 !important;
 
-        &::after {
+        &:after {
           background-color: $gray-500 !important;
         }
       }
@@ -28,7 +28,7 @@
       div {
         background-color: #{$value};
 
-        &::after {
+        &:after {
           background-color: $white;
         }
       }
@@ -37,7 +37,7 @@
         div {
           background-color: rgba($value, 0.3);
 
-          &::after {
+          &:after {
             background-color: #{$value};
           }
         }

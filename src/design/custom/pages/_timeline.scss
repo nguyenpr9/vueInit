@@ -7,24 +7,24 @@
 .hori-timeline {
   .events {
     .event-list {
-      display: block;
       text-align: center;
+      display: block;
 
       .event-down-icon {
         position: relative;
         &::before {
-          position: absolute;
-          top: 16px;
-          right: 0;
-          left: 0;
-          width: 100%;
           content: '';
+          position: absolute;
+          width: 100%;
+          top: 16px;
+          left: 0;
+          right: 0;
           border-bottom: 3px dashed $gray-300;
         }
         .down-arrow-icon {
           position: relative;
-          padding: 4px;
           background-color: $card-bg;
+          padding: 4px;
         }
       }
 
@@ -37,7 +37,7 @@
       &.active {
         .down-arrow-icon {
           animation: fade-down 1.5s infinite linear;
-          &::before {
+          &:before {
             content: '\ec4c';
           }
         }
@@ -49,16 +49,16 @@
 /************** vertical timeline **************/
 
 .verti-timeline {
-  margin: 0 10px;
   border-left: 3px dashed $gray-300;
+  margin: 0 10px;
   .event-list {
     position: relative;
-    padding: 0 0 40px 30px;
+    padding: 0px 0px 40px 30px;
 
     .event-timeline-dot {
       position: absolute;
-      top: 0;
       left: -9px;
+      top: 0px;
       z-index: 9;
       font-size: 16px;
     }
@@ -75,7 +75,7 @@
     }
 
     &:last-child {
-      padding-bottom: 0;
+      padding-bottom: 0px;
     }
   }
 }
