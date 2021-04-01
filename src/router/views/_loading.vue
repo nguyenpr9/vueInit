@@ -28,10 +28,10 @@ export default {
 @import '@design';
 
 .loadingIcon {
-  @extend %typography-xxlarge;
-
   display: block;
   margin: 0 auto;
+  font-size: 3.157rem;
+  color: #35495e;
 
   // stylelint-disable-next-line selector-class-pattern
   &:global(.v-enter-active) {
