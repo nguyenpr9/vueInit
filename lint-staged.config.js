@@ -4,7 +4,7 @@ module.exports = {
     'yarn lint:prettier --parser json',
   ],
   'package.json': ['yarn lint:prettier'],
-  '*.vue': ['yarn lint:eslint', 'yarn lint:stylelint', 'yarn lint:prettier'],
-  '*.scss': ['yarn lint:stylelint', 'yarn lint:prettier'],
+  '*.vue': ['yarn lint:eslint', 'yarn lint:prettier'],
+  '*.scss': ['yarn lint:prettier'],
   '*.{png,jpeg,jpg,gif,svg}': ['imagemin-lint-staged'],
 }
