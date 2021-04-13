@@ -1,6 +1,5 @@
 <script>
 import router from '@router'
-import { layoutComputed } from '@state/helpers'
 
 import NavBar from '@components/nav-bar.vue'
 import SideBar from '@components/side-bar.vue'
@@ -15,9 +14,6 @@ export default {
     return {
       isMenuCondensed: false,
     }
-  },
-  computed: {
-    ...layoutComputed,
   },
   created: () => {
     document.body.removeAttribute('data-topbar', 'dark')

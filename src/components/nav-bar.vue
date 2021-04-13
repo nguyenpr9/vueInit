@@ -1,6 +1,4 @@
 <script>
-import axios from 'axios'
-
 import simplebar from 'simplebar-vue'
 import i18n from '@src/i18n'
 
@@ -16,26 +14,6 @@ export default {
           flag: require('@assets/images/flags/us.jpg'),
           language: 'en',
           title: 'English',
-        },
-        {
-          flag: require('@assets/images/flags/french.jpg'),
-          language: 'fr',
-          title: 'French',
-        },
-        {
-          flag: require('@assets/images/flags/spain.jpg'),
-          language: 'es',
-          title: 'Spanish',
-        },
-        {
-          flag: require('@assets/images/flags/chaina.png'),
-          language: 'zh',
-          title: 'Chinese',
-        },
-        {
-          flag: require('@assets/images/flags/arabic.png'),
-          language: 'ar',
-          title: 'Arabic',
         },
       ],
       lan: i18n.locale,
@@ -89,14 +67,6 @@ export default {
       this.flag = flag
       i18n.locale = locale
     },
-    logoutUser() {
-      // eslint-disable-next-line no-unused-vars
-      axios.get('http://127.0.0.1:8000/api/logout').then((res) => {
-        this.$router.push({
-          name: 'default',
-        })
-      })
-    },
   },
 }
 </script>
@@ -107,16 +77,7 @@ export default {
       <div class="d-flex">
         <!-- LOGO -->
         <div class="navbar-brand-box">
-          <router-link tag="a" to="/" class="logo logo-dark">
-            <span class="logo-sm">
-              <img src="@assets/images/logo.svg" alt height="22" />
-            </span>
-            <span class="logo-lg">
-              <img src="@assets/images/logo-dark.png" alt height="17" />
-            </span>
-          </router-link>
-
-          <router-link tag="a" to="/" class="logo logo-light">
+          <router-link to="/" class="logo logo-light">
             <span class="logo-sm">
               <img src="@assets/images/logo-light.svg" alt height="22" />
             </span>
@@ -147,24 +108,6 @@ export default {
           <template v-slot:button-content>
             <i class="mdi mdi-magnify"></i>
           </template>
-
-          <form class="p-3">
-            <div class="form-group m-0">
-              <div class="input-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Search ..."
-                  aria-label="Recipient's username"
-                />
-                <div class="input-group-append">
-                  <button class="btn btn-primary" type="submit">
-                    <i class="mdi mdi-magnify"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </form>
         </b-dropdown>
 
         <b-dropdown variant="white" right toggle-class="header-item">
@@ -190,78 +133,13 @@ export default {
           </b-dropdown-item>
         </b-dropdown>
 
-        <b-dropdown
-          class="d-none d-lg-inline-block noti-icon"
-          menu-class="dropdown-menu-lg"
-          right
-          toggle-class="header-item"
-          variant="black"
-        >
-          <template v-slot:button-content>
-            <i class="bx bx-customize"></i>
-          </template>
-
-          <div class="px-lg-2">
-            <div class="row no-gutters">
-              <div class="col">
-                <a class="dropdown-icon-item" href="javascript: void(0);">
-                  <img src="@assets/images/brands/github.png" alt="Github" />
-                  <span>{{ $t('navbar.dropdown.site.list.github') }}</span>
-                </a>
-              </div>
-              <div class="col">
-                <a class="dropdown-icon-item" href="javascript: void(0);">
-                  <img
-                    src="@assets/images/brands/bitbucket.png"
-                    alt="bitbucket"
-                  />
-                  <span>{{ $t('navbar.dropdown.site.list.github') }}</span>
-                </a>
-              </div>
-              <div class="col">
-                <a class="dropdown-icon-item" href="javascript: void(0);">
-                  <img
-                    src="@assets/images/brands/dribbble.png"
-                    alt="dribbble"
-                  />
-                  <span>{{ $t('navbar.dropdown.site.list.dribbble') }}</span>
-                </a>
-              </div>
-            </div>
-
-            <div class="row no-gutters">
-              <div class="col">
-                <a class="dropdown-icon-item" href="javascript: void(0);">
-                  <img src="@assets/images/brands/dropbox.png" alt="dropbox" />
-                  <span>{{ $t('navbar.dropdown.site.list.dropbox') }}</span>
-                </a>
-              </div>
-              <div class="col">
-                <a class="dropdown-icon-item" href="javascript: void(0);">
-                  <img
-                    src="@assets/images/brands/mail_chimp.png"
-                    alt="mail_chimp"
-                  />
-                  <span>{{ $t('navbar.dropdown.site.list.mailchimp') }}</span>
-                </a>
-              </div>
-              <div class="col">
-                <a class="dropdown-icon-item" href="javascript: void(0);">
-                  <img src="@assets/images/brands/slack.png" alt="slack" />
-                  <span>{{ $t('navbar.dropdown.site.list.slack') }}</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </b-dropdown>
-
         <div class="dropdown d-none d-lg-inline-block ml-1">
           <button
             type="button"
             class="btn header-item noti-icon"
             @click="initFullScreen"
           >
-            <i class="bx bx-fullscreen"></i>
+            <i class="bx bx-customize"></i>
           </button>
         </div>
 
@@ -420,26 +298,18 @@ export default {
               {{ $t('navbar.dropdown.henry.list.profile') }}
             </router-link>
           </b-dropdown-item>
-          <b-dropdown-item href="javascript: void(0);">
-            <i class="bx bx-wallet font-size-16 align-middle mr-1"></i>
-            {{ $t('navbar.dropdown.henry.list.mywallet') }}
-          </b-dropdown-item>
           <b-dropdown-item class="d-block" href="javascript: void(0);">
             <span class="badge badge-success float-right">11</span>
             <i class="bx bx-wrench font-size-16 align-middle mr-1"></i>
             {{ $t('navbar.dropdown.henry.list.settings') }}
           </b-dropdown-item>
-          <b-dropdown-item href="javascript: void(0);">
-            <i class="bx bx-lock-open font-size-16 align-middle mr-1"></i>
-            {{ $t('navbar.dropdown.henry.list.lockscreen') }}
-          </b-dropdown-item>
           <b-dropdown-divider></b-dropdown-divider>
-          <a href="/logout" class="dropdown-item text-danger">
+          <router-link to="/logout" class="dropdown-item text-danger">
             <i
               class="bx bx-power-off font-size-16 align-middle mr-1 text-danger"
             ></i>
             {{ $t('navbar.dropdown.henry.list.logout') }}
-          </a>
+          </router-link>
         </b-dropdown>
       </div>
     </div>

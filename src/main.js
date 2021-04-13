@@ -3,8 +3,13 @@ import router from '@router'
 import store from '@state/store'
 import BootstrapVue from 'bootstrap-vue'
 import vco from 'v-click-outside'
+import { ValidationProvider, ValidationObserver } from 'vee-validate'
 import App from './app.vue'
 import i18n from './i18n.js'
+import './validators/index'
+Vue.component('VObserver', ValidationObserver)
+Vue.component('VProvider', ValidationProvider)
+
 Vue.use(vco)
 Vue.use(BootstrapVue)
 // Don't warn about using the dev version of Vue in development.

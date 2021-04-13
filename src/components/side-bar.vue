@@ -1,7 +1,6 @@
 <script>
 import simplebar from 'simplebar-vue'
 
-import { layoutComputed } from '@state/helpers'
 import SideNav from './side-nav.vue'
 /**
  * Sidebar component
@@ -20,9 +19,6 @@ export default {
         minScrollbarLength: 60,
       },
     }
-  },
-  computed: {
-    ...layoutComputed,
   },
   watch: {
     $route: {

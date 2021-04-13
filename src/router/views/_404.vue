@@ -1,12 +1,9 @@
 <script>
-import Layout from '@layouts/main.vue'
-
 export default {
   page: {
-    title: '404',
+    title: '404 Error Page',
     meta: [{ name: 'description', content: '404' }],
   },
-  components: { Layout },
   props: {
     resource: {
       type: String,
@@ -17,19 +14,32 @@ export default {
 </script>
 
 <template>
-  <Layout>
-    <h1 :class="$style.title">
-      404
-      <template v-if="resource">
-        {{ resource }}
-      </template>
-      Not Found
-    </h1>
-  </Layout>
+  <div class="account-pages my-5 pt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="text-center mb-5">
+            <h1 class="display-2 font-weight-medium">
+              4<i class="bx bx-buoy bx-spin text-primary display-3"></i>4
+            </h1>
+            <h4 class="text-uppercase"
+              >Sorry, {{ resource || 'page' }} not found</h4
+            >
+            <div class="mt-5 text-center">
+              <router-link tag="a" class="btn btn-primary" to="/"
+                >Back to Dashboard</router-link
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-xl-6">
+          <div>
+            <img src="@assets/images/error-img.png" alt class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
-
-<style lang="scss" scoped>
-.title {
-  text-align: center;
-}
-</style>
