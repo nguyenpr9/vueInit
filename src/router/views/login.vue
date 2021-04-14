@@ -1,4 +1,5 @@
 <script>
+import { authMethods } from '@state/helpers'
 export default {
   page: {
     title: 'Login',
@@ -7,11 +8,16 @@ export default {
     return {
       loading: false,
       loginForm: {},
+      failsAuth: 0,
     }
   },
   methods: {
+    ...authMethods,
     getValidationState({ errors, valid }) {
       return errors[0] ? false : valid ? true : null
+    },
+    countDownChanged(dismissCountDown) {
+      this.failsAuth = dismissCountDown
     },
     login(validate) {
       validate().then(async (success) => {
@@ -24,8 +30,20 @@ export default {
           el.focus()
           return
         }
-        this.$store.commit('auth/SET_CURRENT_USER', this.loginForm)
-        await this.$router.push('/')
+        try {
+          this.loading = true
+          await this.logIn(this.loginForm)
+          await this.setMe()
+          await this.$router.push('/')
+        } catch {
+          this.failsAuth = 2
+          this.loginForm.password = null
+          requestAnimationFrame(() => {
+            this.$refs.observerLogin.reset()
+          })
+        } finally {
+          this.loading = false
+        }
       })
     },
   },
@@ -69,6 +87,16 @@ export default {
                 </div>
               </div>
               <div class="p-2">
+                <b-alert
+                  fade
+                  :show="failsAuth"
+                  variant="danger"
+                  class="mt-3"
+                  dismissible
+                  @dismiss-count-down="countDownChanged"
+                  >Tài khoản hoặc mật khẩu không đúng!</b-alert
+                >
+
                 <v-observer ref="observerLogin" v-slot="{ validate }">
                   <b-form @submit.stop.prevent="login(validate)">
                     <v-provider
@@ -100,6 +128,7 @@ export default {
                       >
                         <b-form-input
                           v-model.trim="loginForm.password"
+                          type="password"
                           :state="getValidationState(validationContext)"
                         ></b-form-input>
                         <b-form-invalid-feedback>{{

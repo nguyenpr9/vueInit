@@ -1,3 +1,4 @@
+import axios from 'axios'
 import { ResponseWrapper, ErrorWrapper } from '@utils/wrapResponse'
 import { Http } from './Http'
 
@@ -11,13 +12,22 @@ export class BaseAbstractRepo {
   static get baseUrl() {
     throw new Error('baseUrl getter not defined')
   }
+
+  static get baseHeader() {
+    return {}
+  }
   /**
    * ------------------------------
    * @HELPERS
    * ------------------------------
    */
 
-  static callApi(auth = false) {
+  static callApi(auth = true) {
+    if (typeof this.baseHeader === 'object') {
+      for (const [k, v] of Object.entries(this.baseHeader)) {
+        axios.defaults.headers.common[k] = v
+      }
+    }
     return new Http({ auth, baseUrl: this.baseUrl })
   }
 

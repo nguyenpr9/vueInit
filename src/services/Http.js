@@ -1,9 +1,10 @@
 import axios from 'axios'
+import $store from '@state/store'
 import { AuthService } from '@services/auth.service'
 
 export class Http {
   constructor({ auth, baseUrl }) {
-    this.isAuth = auth || false
+    this.isAuth = auth
     this.instance = axios.create({
       baseURL: baseUrl,
     })
@@ -14,18 +15,13 @@ export class Http {
     if (this.isAuth) {
       this.instance.interceptors.request.use(
         (request) => {
-          request.headers.authorization = AuthService.getBearer()
+          request.headers.authorization = `Bearer ${$store.state.auth.token}`
           if (
-            AuthService.isAccessTokenExpired() &&
-            AuthService.hasRefreshToken()
+            $store.getters['auth/isTokenExp'] &&
+            $store.getters['auth/hasRefreshToken']
           ) {
-            return AuthService.debounceRefreshTokens()
-              .then((response) => {
-                AuthService.setBearer(response.data.accessToken)
-                request.headers.authorization = AuthService.getBearer()
-                return request
-              })
-              .catch((error) => Promise.reject(error))
+            AuthService.debounceRefreshTokens()
+            return request
           } else {
             return request
           }

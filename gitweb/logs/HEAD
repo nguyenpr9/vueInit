@@ -1,0 +1,34 @@
+0000000000000000000000000000000000000000 701af9c55717d2950582b9a3cdc22ad55a2fa4ea nguyendt <nguyendt@mpos.vn> 1618221341 +0700	commit (initial): init
+701af9c55717d2950582b9a3cdc22ad55a2fa4ea 0000000000000000000000000000000000000000 nguyendt <nguyendt@mpos.vn> 1618221346 +0700	Branch: renamed refs/heads/master to refs/heads/main
+0000000000000000000000000000000000000000 701af9c55717d2950582b9a3cdc22ad55a2fa4ea nguyendt <nguyendt@mpos.vn> 1618221346 +0700	Branch: renamed refs/heads/master to refs/heads/main
+701af9c55717d2950582b9a3cdc22ad55a2fa4ea 701af9c55717d2950582b9a3cdc22ad55a2fa4ea nguyendt <nguyendt@mpos.vn> 1618281877 +0700	reset: moving to HEAD
+701af9c55717d2950582b9a3cdc22ad55a2fa4ea d382a3290e3aa1f21446caf2894da47376fc4488 nguyendt <nguyendt@mpos.vn> 1618281877 +0700	commit: update code
+d382a3290e3aa1f21446caf2894da47376fc4488 d382a3290e3aa1f21446caf2894da47376fc4488 nguyendt <nguyendt@mpos.vn> 1618287293 +0700	reset: moving to HEAD
+d382a3290e3aa1f21446caf2894da47376fc4488 d382a3290e3aa1f21446caf2894da47376fc4488 nguyendt <nguyendt@mpos.vn> 1618287296 +0700	reset: moving to HEAD
+d382a3290e3aa1f21446caf2894da47376fc4488 d382a3290e3aa1f21446caf2894da47376fc4488 nguyendt <nguyendt@mpos.vn> 1618287296 +0700	reset: moving to HEAD
+d382a3290e3aa1f21446caf2894da47376fc4488 d382a3290e3aa1f21446caf2894da47376fc4488 nguyendt <nguyendt@mpos.vn> 1618287333 +0700	reset: moving to HEAD
+d382a3290e3aa1f21446caf2894da47376fc4488 dd8764b46c5be146fe986a66def712f5c2930e9e nguyendt <nguyendt@mpos.vn> 1618287332 +0700	commit: update code
+dd8764b46c5be146fe986a66def712f5c2930e9e dd8764b46c5be146fe986a66def712f5c2930e9e nguyendt <nguyendt@mpos.vn> 1618290105 +0700	checkout: moving from main to master
+dd8764b46c5be146fe986a66def712f5c2930e9e dd8764b46c5be146fe986a66def712f5c2930e9e nguyendt <nguyendt@mpos.vn> 1618290110 +0700	checkout: moving from master to main
+dd8764b46c5be146fe986a66def712f5c2930e9e dd8764b46c5be146fe986a66def712f5c2930e9e nguyendt <nguyendt@mpos.vn> 1618290128 +0700	checkout: moving from main to master
+dd8764b46c5be146fe986a66def712f5c2930e9e dd8764b46c5be146fe986a66def712f5c2930e9e nguyendt <nguyendt@mpos.vn> 1618290161 +0700	checkout: moving from master to main
+dd8764b46c5be146fe986a66def712f5c2930e9e dd8764b46c5be146fe986a66def712f5c2930e9e nguyendt <nguyendt@mpos.vn> 1618290170 +0700	reset: moving to HEAD
+dd8764b46c5be146fe986a66def712f5c2930e9e 6dd84f7112fd82b8e52c4acbef9695b0f61032a5 nguyendt <nguyendt@mpos.vn> 1618290170 +0700	commit: update code
+6dd84f7112fd82b8e52c4acbef9695b0f61032a5 dd8764b46c5be146fe986a66def712f5c2930e9e nguyendt <nguyendt@mpos.vn> 1618290186 +0700	checkout: moving from main to master
+dd8764b46c5be146fe986a66def712f5c2930e9e 6dd84f7112fd82b8e52c4acbef9695b0f61032a5 nguyendt <nguyendt@mpos.vn> 1618290190 +0700	merge main: Fast-forward
+6dd84f7112fd82b8e52c4acbef9695b0f61032a5 6dd84f7112fd82b8e52c4acbef9695b0f61032a5 nguyendt <nguyendt@mpos.vn> 1618290226 +0700	checkout: moving from master to master
+6dd84f7112fd82b8e52c4acbef9695b0f61032a5 6dd84f7112fd82b8e52c4acbef9695b0f61032a5 nguyendt <nguyendt@mpos.vn> 1618298436 +0700	reset: moving to HEAD
+6dd84f7112fd82b8e52c4acbef9695b0f61032a5 6dd84f7112fd82b8e52c4acbef9695b0f61032a5 nguyendt <nguyendt@mpos.vn> 1618298437 +0700	reset: moving to HEAD
+6dd84f7112fd82b8e52c4acbef9695b0f61032a5 6dd84f7112fd82b8e52c4acbef9695b0f61032a5 nguyendt <nguyendt@mpos.vn> 1618298437 +0700	reset: moving to HEAD
+6dd84f7112fd82b8e52c4acbef9695b0f61032a5 6dd84f7112fd82b8e52c4acbef9695b0f61032a5 nguyendt <nguyendt@mpos.vn> 1618298453 +0700	reset: moving to HEAD
+6dd84f7112fd82b8e52c4acbef9695b0f61032a5 1cbcc8a6b0240814853bf7a6663f0c3f8100c7d7 nguyendt <nguyendt@mpos.vn> 1618298452 +0700	commit: update
+1cbcc8a6b0240814853bf7a6663f0c3f8100c7d7 6dd84f7112fd82b8e52c4acbef9695b0f61032a5 nguyendt <nguyendt@mpos.vn> 1618298474 +0700	checkout: moving from master to main
+6dd84f7112fd82b8e52c4acbef9695b0f61032a5 1cbcc8a6b0240814853bf7a6663f0c3f8100c7d7 nguyendt <nguyendt@mpos.vn> 1618298481 +0700	merge master: Fast-forward
+1cbcc8a6b0240814853bf7a6663f0c3f8100c7d7 1cbcc8a6b0240814853bf7a6663f0c3f8100c7d7 nguyendt <nguyendt@mpos.vn> 1618371951 +0700	reset: moving to HEAD
+1cbcc8a6b0240814853bf7a6663f0c3f8100c7d7 1cbcc8a6b0240814853bf7a6663f0c3f8100c7d7 nguyendt <nguyendt@mpos.vn> 1618371953 +0700	reset: moving to HEAD
+1cbcc8a6b0240814853bf7a6663f0c3f8100c7d7 1cbcc8a6b0240814853bf7a6663f0c3f8100c7d7 nguyendt <nguyendt@mpos.vn> 1618371955 +0700	reset: moving to HEAD
+1cbcc8a6b0240814853bf7a6663f0c3f8100c7d7 1cbcc8a6b0240814853bf7a6663f0c3f8100c7d7 nguyendt <nguyendt@mpos.vn> 1618372002 +0700	reset: moving to HEAD
+1cbcc8a6b0240814853bf7a6663f0c3f8100c7d7 1cbcc8a6b0240814853bf7a6663f0c3f8100c7d7 nguyendt <nguyendt@mpos.vn> 1618372053 +0700	reset: moving to HEAD
+1cbcc8a6b0240814853bf7a6663f0c3f8100c7d7 f4ada0f834e41b1a3f6109313bed32cbe7459c8d nguyendt <nguyendt@mpos.vn> 1618372052 +0700	commit: update code
+f4ada0f834e41b1a3f6109313bed32cbe7459c8d 1cbcc8a6b0240814853bf7a6663f0c3f8100c7d7 nguyendt <nguyendt@mpos.vn> 1618372086 +0700	checkout: moving from main to master
+1cbcc8a6b0240814853bf7a6663f0c3f8100c7d7 f4ada0f834e41b1a3f6109313bed32cbe7459c8d nguyendt <nguyendt@mpos.vn> 1618372088 +0700	merge main: Fast-forward

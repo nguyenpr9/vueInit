@@ -2,13 +2,11 @@
 import * as UAParser from 'ua-parser-js' */
 
 import $store from '@state/store'
-import $router from '@router'
 import { BaseAbstractRepo } from '@services/BaseAbstractRepo'
-let BEARER = ''
 
 export class AuthService extends BaseAbstractRepo {
   static get baseUrl() {
-    return `https://facebook.com/`
+    return `${process.env.VUE_APP_URL_API}/auth`
   }
 
   /**
@@ -17,61 +15,54 @@ export class AuthService extends BaseAbstractRepo {
    ******************************
    */
 
-  static async makeLogin({ email, password }) {
+  static async makeLogin({ username, password }) {
     try {
+      const basic = btoa(`${username}:${password}`)
       // const fingerprint = await _getFingerprint()
-      const response = await this.callApi().post(
-        `auth/login`,
-        { email, password },
+      const response = await this.callApi(false).get(
+        `login`,
+        {
+          headers: {
+            Authorization: `Basic ${basic}`,
+          },
+        },
         { withCredentials: true }
       )
-      _setAuthData({
-        accessToken: response.data.data.accessToken,
-        exp: _parseTokenData(response.data.data.accessToken).exp,
-      })
-      return new this.ResWrapper(response, response.data.data)
+      return this.ResWrapper(response, response.data.data)
     } catch (error) {
-      throw new this.ErrWrapper(error)
+      throw this.ErrWrapper(error)
+    }
+  }
+
+  static async getMe() {
+    try {
+      const response = await this.callApi().get(`me`)
+      return this.ResWrapper(response, response.data.data)
+    } catch (error) {
+      throw this.ErrWrapper(error)
     }
   }
 
   static async makeLogout() {
     try {
-      const response = await this.callApi(true).post(
-        'auth/logout',
-        {},
-        { withCredentials: true }
-      )
-      _resetAuthData()
-      $router.push({ name: 'login' }).catch(() => {})
-      return new this.ResWrapper(response, response.data.data)
+      const response = await this.callApi(true).delete('logout')
+      return this.ResWrapper(response, response.data.data)
     } catch (error) {
-      throw new this.ErrWrapper(error)
+      throw this.ErrWrapper(error)
     }
   }
 
   static async refreshTokens() {
     try {
-      const response = await this.callApi().post(
-        `auth/refresh-tokens`,
-        {},
-        { withCredentials: true }
-      )
-
-      _setAuthData({
-        accessToken: response.data.data.accessToken,
-        exp: _parseTokenData(response.data.data.accessToken).exp,
-      })
-      return new this.ResWrapper(response, response.data.data)
+      const response = await this.callApi().get(`refresh`)
+      return this.ResWrapper(response, response.data.data)
     } catch (error) {
-      _resetAuthData()
-      $router.push({ name: 'login' }).catch(() => {})
-      throw new this.ErrWrapper(error)
+      throw this.ErrWrapper(error)
     }
   }
 
   static debounceRefreshTokens = this._debounce(() => {
-    return this.refreshTokens()
+    return $store.dispatch('auth/refreshTokens')
   }, 100)
 
   /**
@@ -79,35 +70,6 @@ export class AuthService extends BaseAbstractRepo {
    * @METHODS
    ******************************
    */
-
-  static isAccessTokenExpired() {
-    const accessTokenExpDate = $store.state.auth.accessTokenExpDate - 10
-    const nowTime = Math.floor(new Date().getTime() / 1000)
-
-    return accessTokenExpDate <= nowTime
-  }
-
-  static hasRefreshToken() {
-    return Boolean(localStorage.getItem('refreshToken'))
-  }
-
-  static setRefreshToken(status) {
-    if (!['', 'true'].includes(status)) {
-      throw new Error(
-        `setRefreshToken: invalid value ${status}; Expect one of ['', 'true']`
-      )
-    }
-
-    localStorage.setItem('refreshToken', status)
-  }
-
-  static getBearer() {
-    return BEARER
-  }
-
-  static setBearer(accessToken) {
-    BEARER = `Bearer ${accessToken}`
-  }
 
   /**
    * https://stackoverflow.com/questions/35228052/debounce-function-implemented-with-promises
@@ -138,35 +100,6 @@ export class AuthService extends BaseAbstractRepo {
  * @private_methods
  ******************************
  */
-
-function _parseTokenData(accessToken) {
-  let payload = ''
-  let tokenData = {}
-
-  try {
-    payload = accessToken.split('.')[1]
-    tokenData = JSON.parse(atob(payload))
-  } catch (error) {
-    throw new Error(error)
-  }
-
-  return tokenData
-}
-
-function _resetAuthData() {
-  // reset userData in store
-  $store.commit('user/SET_CURRENT_USER', {})
-  $store.commit('auth/SET_ATOKEN_EXP_DATE', null)
-  // reset tokens
-  AuthService.setRefreshToken('')
-  AuthService.setBearer('')
-}
-
-function _setAuthData({ accessToken, exp } = {}) {
-  AuthService.setRefreshToken('true')
-  AuthService.setBearer(accessToken)
-  $store.commit('auth/SET_ATOKEN_EXP_DATE', exp)
-}
 
 /* function _getFingerprint () {
   return new Promise((resolve, reject) => {
